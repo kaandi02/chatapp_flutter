@@ -40,6 +40,7 @@ buildLoginTextTitle(String text){
         fontSize: 28,
         fontWeight: FontWeight.w600,
         color: Colors.white,
+        letterSpacing: 1.5,
       ),
     ),
   );
@@ -54,6 +55,7 @@ buildLoginTextSubTitle(String text){
         fontSize: 16,
         fontWeight: FontWeight.bold,
         color: Colors.grey[200],
+        letterSpacing: 1.5,
       ),
     ),
   );
@@ -78,7 +80,7 @@ buildTextTitleVariation2(String text, bool opacity){
     padding: EdgeInsets.only(bottom: 16),
     child: Text(
       text,
-      style: TextStyle(
+      style: GoogleFonts.urbanist(
         fontSize: 24,
         fontWeight: FontWeight.bold,
         color: Colors.white,
@@ -107,9 +109,9 @@ buildTextSubTitleVariation2(String text){
     child: Text(
       text,
       overflow: TextOverflow.ellipsis,
-      style: TextStyle(
+      style: GoogleFonts.urbanist(
         fontSize: 16,
-        color: Colors.grey[400],
+        color: Colors.white,
       ),
     ),
   );

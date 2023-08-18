@@ -13,6 +13,7 @@ class Explore extends StatefulWidget {
 
 class _ExploreState extends State<Explore> {
 
+  @override
   void initState(){
     super.initState();
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -24,25 +25,25 @@ class _ExploreState extends State<Explore> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(color: Colors.black),
+        decoration: const BoxDecoration(color: Colors.black),
         child: Column(
           children: [
             Container(
-              alignment: Alignment(0, 1),
+              alignment: const Alignment(0, 1),
               decoration: BoxDecoration(color:kPrimaryColor,),
               height: 500,
               width: double.infinity,
               child: SvgPicture.asset("assets/images/Group 1.svg"),
             ),
             Padding(
-                padding: EdgeInsets.all(30),
+                padding: const EdgeInsets.all(30),
               child: buildExploreTextTitle("Stay Connected with your friends and family"),
             ),
             Padding(
-                padding: EdgeInsets.only(top: 0,left: 30,right: 30),
+                padding: const EdgeInsets.only(top: 0,left: 30,right: 30),
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.shield_moon_rounded,
                     color: Colors.green,
                   ),
@@ -51,13 +52,13 @@ class _ExploreState extends State<Explore> {
               ),
             ),
             Padding(
-                padding: EdgeInsets.only(left:0,top:30,right: 0),
+                padding: const EdgeInsets.only(left:0,top:30,right: 0),
               child: Container(
                 width: 350,
                 height: 60,
                 decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.white),
                 child: TextButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Login()));
                 }, child: buildTextTitleVariation1("Get Started"),),
               ),
             )

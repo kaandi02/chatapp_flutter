@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:testapp/constants.dart';
+import 'package:testapp/pages/otp_verification.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -32,22 +32,27 @@ class _LoginState extends State<Login> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 30,vertical: 50),
+                  padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 50),
                   child: buildTextTitleVariation2("COMPANY LOGO",false),
                 ),
                 Expanded(
                     child: Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(25),
+                        padding: const EdgeInsets.all(25),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
+                            /*
+                            Container(
+                              height: 200,
+                              width: double.infinity,
+                              child: SvgPicture.asset("assets/images/undraw_messages_re_qy9x.svg"),
+                            ),*/
                             Padding(
-                                padding: EdgeInsets.all(0),
+                                padding: const EdgeInsets.all(0),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -56,41 +61,43 @@ class _LoginState extends State<Login> {
                                   ],
                                 )
                             ),
-                            Container(
-                              height: 200,
-                              width: double.infinity,
-                              child: SvgPicture.asset("assets/images/undraw_messages_re_qy9x.svg"),
-                            ),
-                            Container(
-                              padding: EdgeInsets.symmetric(horizontal: 25,vertical:5),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Stack(
-                                children: [
-                                  InternationalPhoneNumberInput(
-                                    onInputChanged: (value){},
-                                    initialValue: PhoneNumber(isoCode: "IN"),
-                                    selectorConfig: SelectorConfig(
-                                      selectorType: PhoneInputSelectorType.BOTTOM_SHEET,
+                            Padding(
+                              padding: const EdgeInsets.only(top: 150),
+                              child:
+                              Column(
+                                  children:[
+                                    Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 25,vertical:5),
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Stack(
+                                          children: [
+                                            InternationalPhoneNumberInput(
+                                              onInputChanged: (value){},
+                                              initialValue: PhoneNumber(isoCode: "IN"),
+                                              selectorConfig: const SelectorConfig(
+                                                selectorType: PhoneInputSelectorType.BOTTOM_SHEET,
+                                              ),
+                                            ),
+                                          ],
+                                        )
                                     ),
-                                  ),
-                                ],
-                              )
-                            ),
-                            Container(
-                              width: 100,
-                              height: 40,
-                              decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.white),
-                              child: TextButton(
-                                style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(kPrimaryColor),),
-                                onPressed: (){
-                                  print("Pressed!..");
-                                //Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
-                              }, child: Text("Login",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w600)),
-                              )
-                            ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left:0,top:30,right: 0),
+                                      child: Container(
+                                        width: 150,
+                                        height: 50,
+                                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: kPrimaryColor),
+                                        child: TextButton(onPressed: (){
+                                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const OtpVerification()));
+                                        }, child: const Text("LOGIN",style: TextStyle(letterSpacing:2,fontSize: 20,fontWeight: FontWeight.w900,color: Colors.black),)),
+                                      ),
+                                    )
+                                  ]
+                                  )
+                                ),
                           ],
                         )
                       ),
