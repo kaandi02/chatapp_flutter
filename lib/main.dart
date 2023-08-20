@@ -28,7 +28,7 @@ class _MyappState extends State<Myapp> {
         textTheme: GoogleFonts.urbanistTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
-      home: Explore(),
+      home: const Explore(),
     );
   }
 }

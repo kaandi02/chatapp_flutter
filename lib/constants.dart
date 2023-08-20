@@ -5,7 +5,7 @@ Color kPrimaryColor = const Color(0xfff9a826);
 
 buildExploreTextTitle(String text){
   return Padding(
-    padding: EdgeInsets.only(top:20,bottom: 8),
+    padding: const EdgeInsets.only(top:20,bottom: 8),
     child: Text(
       text,
       style: GoogleFonts.urbanist(
@@ -19,7 +19,7 @@ buildExploreTextTitle(String text){
 
 buildExploreTextSubTitle(String text){
   return Padding(
-    padding: EdgeInsets.all(20),
+    padding: const EdgeInsets.all(20),
     child: Text(
       text,
       style: GoogleFonts.urbanist(
@@ -33,7 +33,7 @@ buildExploreTextSubTitle(String text){
 
 buildLoginTextTitle(String text){
   return Padding(
-    padding: EdgeInsets.only(top:20,bottom: 8),
+    padding: const EdgeInsets.only(top:20,bottom: 8),
     child: Text(
       text,
       style: GoogleFonts.urbanist(
@@ -48,7 +48,7 @@ buildLoginTextTitle(String text){
 
 buildLoginTextSubTitle(String text){
   return Padding(
-    padding: EdgeInsets.all(0),
+    padding: const EdgeInsets.all(0),
     child: Text(
       text,
       style: GoogleFonts.urbanist(
@@ -63,7 +63,7 @@ buildLoginTextSubTitle(String text){
 
 buildTextTitleVariation1(String text){
   return Padding(
-    padding: EdgeInsets.only(bottom: 8),
+    padding: const EdgeInsets.only(bottom: 8),
     child: Text(
       text,
       style: GoogleFonts.breeSerif(
@@ -77,7 +77,7 @@ buildTextTitleVariation1(String text){
 
 buildTextTitleVariation2(String text, bool opacity){
   return Padding(
-    padding: EdgeInsets.only(bottom: 16),
+    padding: const EdgeInsets.only(bottom: 16),
     child: Text(
       text,
       style: GoogleFonts.urbanist(
@@ -91,7 +91,7 @@ buildTextTitleVariation2(String text, bool opacity){
 
 buildTextSubTitleVariation1(String text){
   return Padding(
-    padding: EdgeInsets.only(bottom: 8),
+    padding: const EdgeInsets.only(bottom: 8),
     child: Text(
       text,
       style: TextStyle(
@@ -105,7 +105,7 @@ buildTextSubTitleVariation1(String text){
 
 buildTextSubTitleVariation2(String text){
   return Padding(
-    padding: EdgeInsets.only(bottom: 8),
+    padding: const EdgeInsets.only(bottom: 8),
     child: Text(
       text,
       overflow: TextOverflow.ellipsis,

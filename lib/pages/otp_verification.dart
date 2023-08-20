@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:testapp/constants.dart';
+import 'package:testapp/pages/home.dart';
+import 'package:testapp/pages/login.dart';
 
 class OtpVerification extends StatefulWidget {
   const OtpVerification({super.key});
@@ -191,10 +193,36 @@ class _OtpVerificationState extends State<OtpVerification> {
                                 ],
                               ),
                             ),
-
                           ],
                         )
                     )
+                  ),
+
+                  Expanded(
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
+                              width: 130,
+                              height: 40,
+                              decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.white),
+                              child: TextButton(onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>const Login()));
+                              }, child: const Text("BACK",style: TextStyle(letterSpacing:1,fontSize: 18,fontWeight: FontWeight.w900,color: Colors.black),)),
+                            ),
+                            Container(
+                              width: 130,
+                              height: 40,
+                              decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: kPrimaryColor),
+                              child: TextButton(onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>const Home()));
+                              }, child: const Text("VERIFY OTP",style: TextStyle(letterSpacing:1,fontSize: 18,fontWeight: FontWeight.w900,color: Colors.black),)),
+                            ),
+                          ],
+                        ),
+                      )
                   )
 
                 ],
